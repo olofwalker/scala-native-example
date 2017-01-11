@@ -12,4 +12,4 @@ scalaVersion := "2.11.8"
 
 nativeClangOptions ++= Seq("-L" ++ baseDirectory.value.getAbsolutePath() ++ "/target")
 
-compile in Compile := (compile in Compile dependsOn make).value
+compile in Compile <<= (compile in Compile).dependsOn(make)

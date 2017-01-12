@@ -7,6 +7,10 @@ A minimal Scala native example (https://github.com/scala-native/scala-native)
 - A custom library path is added to nativeClangOptions so the stub library is found
 - Compile & run with "sbt run"
 
+# Requirements
+
+- 64 bit Linux based OS
+
 # Dependencies
 
 Fedora:

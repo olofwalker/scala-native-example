@@ -17,9 +17,9 @@
 */
 #include <stdio.h>
 
-void gen(const char *fileName){
+void writeFile(const char *fileName,const char *fileContent){
 
   FILE *fp= fopen(fileName,"wb"); /* b -  binary mode */
-  fprintf(fp,"Hello world!");
+  fprintf(fp,fileContent);
   fclose(fp);
 }

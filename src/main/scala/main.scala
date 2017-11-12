@@ -22,18 +22,18 @@ import scalanative.native._
 object Main {
   def main(args: Array[String]): Unit = {
     println("Running stub function")
-    stub.gen(c"hello.wrl")
+    stub.writeFile(c"hello.wrl",c"Hello world!!")
     println("Done...")
   }
 }
 
-// Define the external module, the C library contaning our function "gen"
+// Define the external module, the C library contaning our function "writeFile"
 @extern
 @link("stub")
 // Aribtary object name
 object stub {
   // Name and signature of C function
-  def gen(fileName: CString) : Unit = extern // CString = const char * 
+  def writeFile(fileName: CString,fileContent: CString) : Unit = extern
 }
 
 

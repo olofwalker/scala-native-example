@@ -5,7 +5,7 @@ A minimal Scala Native example that calls a C function (https://github.com/scala
 
 - The project contains two source code files, main.scala and stub.c
 - Main.scala will call a function in stub.c
-- The stub.c function `gen` called from Scala will write a file in the current working directory
+- The stub.c function `writeFile` called from Scala will write a file in the current working directory
 
 ## About the build process
 

@@ -4,12 +4,14 @@ make := {
   "make" !
 }
 
-resolvers += Resolver.sonatypeRepo("snapshots")
-
 enablePlugins(ScalaNativePlugin)
 
-scalaVersion := "2.11.8"
+scalaVersion := "2.11.11"
 
-nativeClangOptions ++= Seq("-L" ++ baseDirectory.value.getAbsolutePath() ++ "/target")
+nativeLinkingOptions ++= Seq("-L" ++ baseDirectory.value.getAbsolutePath() ++ "/target")
+
+nativeMode := "release"
+
+nativeGC := "immix"
 
 compile in Compile := (compile in Compile dependsOn make).value

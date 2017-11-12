@@ -13,6 +13,7 @@ A minimal Scala Native example that calls a C function (https://github.com/scala
 - build.sbt runs the makefile, producing the shared library in the `\target` directory
 - A custom library path is added to `nativeLinkingOptions` so the stub library can be found
 - Compile & run with `sbt run`
+- The resulting native executable can be found in `target/scala-2.11`
 
 # Requirements
 
